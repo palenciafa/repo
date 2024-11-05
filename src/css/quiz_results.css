@@ -1,0 +1,411 @@
+/* General styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    background-color: hsl(0, 0%, 100%);
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+#student-result {
+    margin-left: 10.5%;
+    max-width: 90%; /* Set a maximum width */
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #3C295C;
+}
+
+.result-container {
+    margin: 0;
+    width: 100%;
+    padding: 50px;
+    background-color: #3C2A5D;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure flex items fit properly */
+#student-result .quiz-wrapper {
+    display: flex;
+    border-radius: 15px;
+    border: 2px solid #DA88F9;
+    padding: 10px;
+    flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+}
+
+#student-result .image-container {
+    flex-shrink: 0;
+    margin-right: 15px;
+}
+
+#student-result .quiz-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.details-wrapper {
+    flex-grow: 1;
+}
+
+#student-result .quiz-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 10px 0 8px 0;
+    color: #fff;
+    text-align: start;
+}
+
+#student-result .date-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#student-result .date-wrapper img {
+    margin: -14px 5px 0 0;
+}
+
+#student-result .summary-icon {
+    margin: 0 5px 0 0;
+}
+
+#student-result hr {
+    border: 1px solid #DA88F9;
+}
+
+#student-result .due-date,
+#student-result .course-code,
+#student-result .attempts-info {
+    display: flex;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#student-result .quiz-details {
+    color: #fff;
+    margin-top: 8px;
+}
+
+#student-result h2 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+#student-result .performance-status {
+    margin: 50px 0 0 0;
+}
+
+#student-result .student-list {
+    margin: 0;
+    width: 100%; /* Use full width */
+}
+
+#student-result .student-list table {
+    margin-top: 30px;
+    background: linear-gradient(to right, #3C295C, #7E57C2);
+    width: 100%; /* Full width */
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#student-result .student-list th,
+#student-result .student-list td {
+    padding: 0px;
+    text-align: left;
+}
+
+#student-result .student-list th {
+    text-align: center;
+    color: white;
+    border: none;
+}
+
+#student-result .student-list td {
+    text-align: center;
+    background-color: #5B4C76;
+    color: white;
+    border: 5px solid #3C2A5D;
+    border-left: none;
+    border-right: none;
+}
+
+/* Student Summary */
+
+#student-result .student-summary {
+    padding-top: 24px;
+    color: white;
+}
+
+#student-result .bold {
+    font-weight: bold;
+    color: #DA88F9;
+}
+
+#student-result .progress-bar {
+    background-color: #BA68C8;
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    position: relative;
+}
+
+#student-result .progress {
+    background-color: #DA88F9;
+    border-radius: 20px;
+    height: 100%;
+    margin: 0 30px 0 0;
+}
+
+#student-result .quiz-summary p {
+    color: #DA88F9;
+    font-size: 1.2rem;
+    margin: 5px 5px;
+}
+
+#student-result .acurracy-text {
+    display: flex;
+}
+
+#student-result .quiz-summary h3 {
+    color: #fff;
+    margin: 15px 5px 0;
+}
+
+#student-result .progress-border {
+    border: 2px solid #DA88F9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#student-result .title {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #DA88F9;
+    margin-bottom: 20px;
+}
+
+#student-result .status-grid {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping for status boxes */
+}
+
+#student-result .status-box {
+    flex: 1 1 30%; /* Allow for flexible sizing */
+    padding: 50px;
+    background: linear-gradient(135deg, #3C295C, #7E57C2);
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+#student-result .status-grid .status-icon {
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    font-size: 1rem;
+}
+
+#student-result .attempt-selector {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+#student-result .attempt-selector label {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #fff;
+}
+
+#student-result .attempt-selector select {
+    padding: 5px 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ffffff;
+    background-color: #DA88F9;
+    color: #3C2A5D;
+}
+
+.header-back {
+    margin: 0 0 10px 0; /* Removed excessive margin */
+}
+
+.header-back .back-btn img {
+    width: 20px;
+    height: 20px;
+    filter: invert(13%) sepia(76%) saturate(7486%) hue-rotate(268deg) brightness(90%) contrast(104%);
+}
+
+.retake-quiz-modal .modal-content {
+    background-color: #ffffff; 
+    border-radius: 10px;
+    color: #3C2A5D; 
+}
+
+.retake-quiz-modal .modal-header {
+    background-color: #ffffff;
+    color: white; 
+    border-bottom: none; 
+}
+
+.retake-quiz-modal .modal-title {
+    font-weight: bold; 
+}
+
+.retake-quiz-modal .modal-body {
+    color: #3C2A5D; 
+}
+
+.retake-quiz-modal .modal-footer {
+    background-color: #f1f1f1;
+    border-top: none; 
+}
+
+.retake-quiz-modal .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    border: none; 
+}
+
+.retake-quiz-modal .btn-secondary:hover {
+    background-color: #454a4e;
+    border-color:  #454a4e;
+}
+
+.retake-quiz-modal .btn-primary {
+    background-color: #b55ec4; 
+    border: none; 
+}
+
+.retake-quiz-modal .btn-primary:hover {
+    background-color: #4f2b7a; 
+}
+
+.progress-border {
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    height: 20px;
+    line-height: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress-text {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    line-height: 20px;
+    text-align: center;
+}
+
+.progress:hover .progress-text {
+    display: block;
+}
+
+.retake-quiz-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #DA88F9;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    width: 100%; /* Make button full width */
+    text-align: center; /* Center button text */
+}
+
+.retake-quiz-btn:hover {
+    background-color: #BA68C8;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {w
+
+    #student-result {
+        margin-left: 8%; /* Center content */
+        padding: 20px; /* Adjust padding */
+        margin-top: 20px;
+    }
+
+    #student-result .quiz-title {
+        font-size: 1rem; /* Smaller font for mobile */
+    }
+
+    #student-result .due-date,
+    #student-result .course-code,
+    #student-result .attempts-info {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    #student-result .student-list th,
+    #student-result .student-list td {
+        padding: 5px; /* Adjust padding */
+        font-size: 8px; /* Smaller font size */
+    }
+
+    #student-result .status-grid {
+        flex-direction: column; /* Stack status boxes vertically */
+    }
+
+    #student-result .status-box {
+        margin-bottom: 15px; /* Space between boxes */
+    }
+}
+
+@media (max-width: 480px) {
+
+    #student-result .date-wrapper img{
+        margin: -14px 5px 0 0;
+    }
+    #student-result .status-icon{
+        font-size: 0.8rem; /* Smaller icon size */
+        opacity: 60%; /* Reduce opacity */
+    }
+    #student-result .quiz-wrapper {
+        flex-direction: column; /* Stack quiz items vertically */
+        padding: 10px; /* Adjust padding */
+    }
+
+    #student-result .image-container {
+        margin-bottom: 15px; /* Space below image */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    #student-result .status-box {
+        padding: 30px; /* Adjust padding */
+        font-size: .9rem; /* Smaller font size */
+    }
+
+    .retake-quiz-btn {
+        font-size: 0.9rem; /* Smaller button font size */
+    }
+}

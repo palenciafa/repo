@@ -1,0 +1,128 @@
+#create-activity .main-content {
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  margin:0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#create-activity label, #create-activity input {
+  text-align: left;
+}
+
+#create-activity .btn-group {
+  display: flex;
+  margin: 0 2%;
+}
+#create-activity .icon-group{
+  margin: 0;
+}
+#create-activity .btn-primary {
+  background-color: transparent;
+  font-weight: bold;
+  font-size: 17px;
+  color: #BA68C8;
+  border-radius: 25px;
+  padding: 10px 20px;
+  border: 2px solid #7E57C2;
+  cursor: pointer;
+  width: 10rem;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#create-activity .btn-primary-icon {
+  margin-right: 8px;
+  height: 17px;
+  width: 17px;
+}
+
+#create-activity .btn-primary:hover {
+  background-color: #7E57C2;
+  color: #fff;
+}
+
+#create-activity .icon-group {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-right: 20px;
+}
+
+#create-activity .btn-icon-edit, #create-activity .btn-icon-preview {
+  background-color: transparent;
+  border: 2px solid #7E57C2;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+ margin: 5px;
+}
+
+#create-activity .btn-icon-preview img {
+  padding-top: 4px;
+  width: 50%;
+  height: 50%;
+}
+
+#create-activity .btn-icon-edit img {
+  padding-left: 7px;
+  padding-bottom: 2px;
+  width: 50%;
+  height: 50%;
+}
+
+#create-activity .btn-icon-preview:hover, #create-activity .btn-icon-edit:hover {
+  background-color: #7E57C2;
+}
+
+#create-activity .back-btn {
+  justify-content:left;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+#create-activity .back-btn img {
+  filter: invert(13%) sepia(76%) saturate(7486%) hue-rotate(268deg) brightness(90%) contrast(104%);
+}
+
+.btn-primary.active,
+.btn-icon-preview.active,
+.btn-icon-edit.active {
+  background-color: #7E57C2 !important;
+  color: white !important;
+}
+
+
+@media (max-width: 768px) {
+ 
+  .main-content {
+width: 95%; 
+  
+  }
+  #create-activity{
+    margin: 15% 5%;
+    padding: 0;
+    width:90%;
+  }
+  #create-activity .btn-group {
+    display: flex;
+    margin: 10% 2%;
+  }
+  #create-activity .icon-group{
+    margin:2% 0;
+    display: flex;
+
+  }
+ 
+}

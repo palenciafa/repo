@@ -1,0 +1,25 @@
+.card:hover .card-text button {
+    display: block;
+}
+
+.card-text button {
+    display: none;
+}
+.hidden {
+    display: none;
+}
+
+.join-class-button {
+    background-color: #c770d6;
+    color: #fff !important;
+    border: none;
+    width:250px;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.join-class-button:hover {
+    background-color: #b562e8;
+}
